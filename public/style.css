@@ -8,6 +8,7 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
+  text-align: center;
 }
 
 h1 {
@@ -31,6 +32,7 @@ form {
   width: 100%;
   max-width: 340px;
   border-radius: 3px;
+  margin: 2em;
 }
 
 input {
@@ -68,4 +70,9 @@ footer {
   margin-top: 50px;
   padding-top: 25px;
   border-top: 1px solid lightgrey;
+}
+
+.form {
+  display : flex;
+  justify-content: center;
 }
