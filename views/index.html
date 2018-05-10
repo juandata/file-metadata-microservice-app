@@ -22,14 +22,18 @@
   </head>
   <body>
   <div>
-    <form class="register-form" enctype="multipart/form-data">
+    <form class="register-form" name="uploadFile">
       <input type="file" value="Upload">
+      <input type="text" value="Name">
       <p class="message">Click on Choose File and select a file from your system</p>
     </form>
-    <form class="register-form" action="/get-file-size" method="post">
+    <form class="register-form" enctype="multipart/form-data" action="/get-file-size" method="post">
       <button>Submit</button>
       <p class="message">Click submit to see the file size</p>
     </form>
 </div>
+    <script>
+    
+    </script>
   </body>
 </html>
