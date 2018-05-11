@@ -22,7 +22,7 @@
   </head>
   <body>
   <div>
-    <form class="register-form" enctype="multipart/form-data" method="post" name="uploadFile">
+    <form class="register-form" enctype="multipart/form-data" method="post" name="uploadFile" action="/get-file-size">
       <input type="file" value="Upload" name="uploadedFile" >
       <p class="message">Click on Choose File and select a file from your system</p>
       <button>Submit</button>
@@ -40,8 +40,6 @@ form.addEventListener('submit', function(ev) {
   //name = form.elements["userName"].value;
   //file = form.elements["uploadedFile"].value;
   //console.log(file);
-  var theValue = oData.values();
-  console.log(theValue);
   /*for (var value of oData.values()) {
    console.log(value.size); 
 }*/
@@ -56,7 +54,7 @@ form.addEventListener('submit', function(ev) {
     }
   };
   oReq.send(oData);
-  ev.preventDefault();
+  //ev.preventDefault();
 }, false);
       
     </script>
