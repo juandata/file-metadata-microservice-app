@@ -1,27 +1,38 @@
-Welcome to Glitch
+File-Metadata-Microservice-App
 =================
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+A `full stack` JavaScript app that allows you to upload a file and check its size in another endpoint.
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+**Description**:
+This is one of the 10 FreeCodeCamp challenges designed to get the FCC backend certification. You can check the specific requirements here: [https://www.freecodecamp.org/challenges/file-metadata-microservice](https://www.freecodecamp.org/challenges/file-metadata-microservice)
 
-Find out more [about Glitch](https://glitch.com/about).
+This microservices is a `full stack` JavaScript App that allows you to upload a file via an HTML form and get the file size in another API endpoint. 
 
+**User Stories**:
+ - I can submit a FormData object that includes a file upload.
+ - I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+ - I can get a list of the most recently submitted search strings.
 
-Your Project
+Example Creation Usage 
 ------------
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+ **Search an image with a query:**
+ 
+ [https://image-search-abstraction-layer-app.glitch.me/api/imagesearch/say%20it%20again%20meme?offset=1](https://image-search-abstraction-layer-app.glitch.me/api/imagesearch/say%20it%20again%20meme?offset=1)
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+ **Response**
+- 10 Json Objects containing the image url, snippet, thumbnail and context info of your query. 
+Hint,
+- At the end of your query add **?offset='x'** where **X** is the page number to be retrieved by the API 
 
+ **Get last 10 queries**
+ 
+ [https://image-search-abstraction-layer-app.glitch.me/api/latest/imagesearch/](https://image-search-abstraction-layer-app.glitch.me/api/latest/imagesearch/)
+- 10 Json Objects containing the image url, snippet, thumbnail and context info of your query. 
 
-Made by [Fog Creek](https://fogcreek.com/)
+ **Response**
+ - The last 10 queries made to the API. 
+
+ ------------
+Made by [Juan David Tabares Arce](https://juandavidarce.co/)
 -------------------
-
-\ ゜o゜)ノ

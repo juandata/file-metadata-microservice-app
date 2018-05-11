@@ -18,7 +18,7 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/get-file-size", function(req, res){
+app.post("/get-file-size", function(req, res ){
   var reply = {};
   var form = new formidable.IncomingForm();
   form.parse(req, function(err, fields, files) {
@@ -26,6 +26,8 @@ app.post("/get-file-size", function(req, res){
        reply = {
         "size" : files.uploadedFile.size
       };
+      res.json(reply);
+    res.end();
     });
    
 });
