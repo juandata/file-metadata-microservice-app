@@ -5,7 +5,6 @@
 var express = require('express');
 var app = express();
 var multer  = require('multer');
-var upload = multer({dest : 'uploads/'}); 
 //var formidable = require('formidable');
  
 // we've started you off with Express,  
@@ -19,10 +18,12 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/get-file-size",upload.single('uploadFile'), function(req, res){
-  console.log(req.file, req.body);
+app.post("/get-file-size", function(req, res){
+  //console.log(req.file, req.body);
 res.send("we arrived via post");
 });
+
+
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
