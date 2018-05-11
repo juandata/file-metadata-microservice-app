@@ -5,9 +5,7 @@
 var express = require('express');
 var app = express();
 var multer  = require('multer');
-var upload = multer();
-
-//var formidable = require('formidable');
+var formidable = require('formidable');
  
 // we've started you off with Express,  
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -20,9 +18,16 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/get-file-size", upload.single("uploadFile"), function(req, res){
-  console.log(req.file);
-  res.send("we arrived via post");
+app.post("/get-file-size", function(req, res){
+  var form = new formidable.IncomingForm();
+  form.uploadDir = "/uploads";
+  form.parse(req, function(err, fields, files) {
+      res.send('received upload:\n\n');
+       console.log(files);
+    });
+   
+  
+  //res.send("we arrived via post");
 });
 
 
