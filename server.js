@@ -19,14 +19,15 @@ app.get("/", function (request, response) {
 });
 
 app.post("/get-file-size", function(req, res){
+  var reply = {};
   var form = new formidable.IncomingForm();
   form.parse(req, function(err, fields, files) {
-      res.send('received upload:\n\n');
-       console.log(files.uploadedFile[0]);
+    if (err) throw err;
+       reply = {
+        "size" : files.uploadedFile.size
+      };
     });
    
-  
-  //res.send("we arrived via post");
 });
 
 
