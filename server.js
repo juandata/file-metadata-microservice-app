@@ -4,9 +4,10 @@
 // init project}
 var express = require('express');
 var app = express();
-var formidable = require('formidable');
-
-
+var multer  = require('multer');
+var upload = multer({ dest: 'uploads/' });
+//var formidable = require('formidable');
+ 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -18,13 +19,8 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/get-file-size", function(req, res){
-res.send("we arrived via post");
-});
-app.post("/stash.html", function(req, res){
-  console.log("someone uploaded!");
-    //console.log(req);
-
+app.post("/get-file-size",upload.single('avatar'), function(req, res){
+  console.log(req.file, req.body);
 res.send("we arrived via post");
 });
 // listen for requests :)

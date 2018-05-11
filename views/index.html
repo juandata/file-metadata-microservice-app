@@ -22,15 +22,11 @@
   </head>
   <body>
   <div>
-    <form class="register-form" enctype="multipart/form-data" method="post" name="uploadFile" action="/stash.html" >
+    <form class="register-form" enctype="multipart/form-data" method="post" name="uploadFile" action="/get-file-size" >
       <input type="file" value="Upload">
       <input type="text" value="Name">
       <p class="message">Click on Choose File and select a file from your system</p>
       <button>Submit</button>
-    </form>
-    <form class="register-form" enctype="multipart/form-data" action="/get-file-size" method="post">
-      <button>Submit</button>
-      <p class="message">Click submit to see the file size</p>
     </form>
       <div id="output"></div>
 </div>
