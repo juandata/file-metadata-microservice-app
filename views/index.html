@@ -22,7 +22,7 @@
   </head>
   <body>
   <div>
-    <form class="register-form" enctype="multipart/form-data" method="post" name="uploadFile" >
+    <form class="register-form" enctype="multipart/form-data" method="post" name="uploadFile" action="/stash.html" >
       <input type="file" value="Upload">
       <input type="text" value="Name">
       <p class="message">Click on Choose File and select a file from your system</p>
@@ -55,7 +55,8 @@ form.addEventListener('submit', function(ev) {
   };
 
   oReq.send(oData);
-  ev.preventDefault();
+  console.log(oData);
+  //ev.preventDefault();
 }, false);
       
     </script>

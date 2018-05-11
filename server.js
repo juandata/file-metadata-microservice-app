@@ -23,7 +23,7 @@ res.send("we arrived via post");
 });
 app.post("/stash.html", function(req, res){
   console.log("someone uploaded!");
-    console.log(req);
+    //console.log(req);
 
 res.send("we arrived via post");
 });
