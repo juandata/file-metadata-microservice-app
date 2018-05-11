@@ -21,7 +21,12 @@ app.get("/", function (request, response) {
 app.post("/get-file-size", function(req, res){
 res.send("we arrived via post");
 });
+app.post("/stash.html", function(req, res){
+  console.log("someone uploaded!");
+    console.log(req);
 
+res.send("we arrived via post");
+});
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
