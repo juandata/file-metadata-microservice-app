@@ -4,7 +4,6 @@
 // init project}
 var express = require('express');
 var app = express();
-var multer  = require('multer');
 var formidable = require('formidable');
  
 // we've started you off with Express,  
