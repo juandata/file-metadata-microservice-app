@@ -37,10 +37,11 @@ form.addEventListener('submit', function(ev) {
   var
     oOutput = document.getElementById("output"),
     oData = new FormData(document.forms.namedItem("uploadFile"));
-  oData.append("CustomField", "This is some extra data");
-  for (var key of oData.keys()) {
-   console.log(key); 
-}
+    oData.append("CustomField", "This is some extra data");
+  
+  //accesing the values
+  name = oForm.elements[];
+  
   //http request
   var oReq = new XMLHttpRequest();
   oReq.open("POST", "/get-file-size", true);
