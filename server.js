@@ -20,7 +20,6 @@ app.get("/", function (request, response) {
 
 app.post("/get-file-size", function(req, res){
   var form = new formidable.IncomingForm();
-  form.uploadDir = "/uploads";
   form.parse(req, function(err, fields, files) {
       res.send('received upload:\n\n');
        console.log(files);
