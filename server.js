@@ -27,12 +27,10 @@ app.post("/get-file-size", function(req, res ){
         "size" : files.uploadedFile.size
       };
       res.json(reply);
-    res.end();
+      res.end();
     });
    
 });
-
-
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);

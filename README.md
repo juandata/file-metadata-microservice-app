@@ -10,29 +10,15 @@ This microservices is a `full stack` JavaScript App that allows you to upload a 
 
 **User Stories**:
  - I can submit a FormData object that includes a file upload.
- - I can paginate through the responses by adding a ?offset=2 parameter to the URL.
- - I can get a list of the most recently submitted search strings.
+ - When I submit something, I will receive the file size in bytes within the JSON response.
 
-Example Creation Usage 
+How to use it?
 ------------
 
- **Search an image with a query:**
+ **Upload a file from your pc and check its size in the server response:**
+
+- Go to the url [https://file-metadata-microservice-app.glitch.me/](https://file-metadata-microservice-app.glitch.me/) to upload a file, then click on submit to get its size. 
  
- [https://image-search-abstraction-layer-app.glitch.me/api/imagesearch/say%20it%20again%20meme?offset=1](https://image-search-abstraction-layer-app.glitch.me/api/imagesearch/say%20it%20again%20meme?offset=1)
-
- **Response**
-- 10 Json Objects containing the image url, snippet, thumbnail and context info of your query. 
-Hint,
-- At the end of your query add **?offset='x'** where **X** is the page number to be retrieved by the API 
-
- **Get last 10 queries**
- 
- [https://image-search-abstraction-layer-app.glitch.me/api/latest/imagesearch/](https://image-search-abstraction-layer-app.glitch.me/api/latest/imagesearch/)
-- 10 Json Objects containing the image url, snippet, thumbnail and context info of your query. 
-
- **Response**
- - The last 10 queries made to the API. 
-
  ------------
 Made by [Juan David Tabares Arce](https://juandavidarce.co/)
 -------------------
