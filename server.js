@@ -5,6 +5,8 @@
 var express = require('express');
 var app = express();
 var multer  = require('multer');
+var upload = multer();
+
 //var formidable = require('formidable');
  
 // we've started you off with Express,  
@@ -18,8 +20,8 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/get-file-size", function(req, res){
-  console.log(req.body);
+app.post("/get-file-size", upload.single("uploadFile"), function(req, res){
+  console.log(req.file);
   res.send("we arrived via post");
 });
 
