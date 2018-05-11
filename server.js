@@ -19,7 +19,7 @@ app.get("/", function (request, response) {
 });
 
 app.post("/get-file-size", function(req, res){
-  console.log(req);
+  console.log(req.body);
 res.send("we arrived via post");
 });
 
